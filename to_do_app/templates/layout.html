@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            To Do Web App
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>To-Do</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Santosh Chhetri. All rights reserved.</p>
+        <p><a href="/privacy-policy" rel="nofollow">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

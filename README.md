@@ -7,12 +7,19 @@ A simple to-do web application built using Django framework.
 - Task Creation and Editing
 
 ## 🗂️ Project Structure
-    myproject/
-    ├── manage.py
-    ├── blog/
-    │   ├── views.py
-    │   ├── models.py
-    └── templates/
+    TO DO WEB APP/
+    |--->.venv
+    |--->to_do_app
+    |   |--->templates
+    |   |--->to_do_app
+    |   |--->users
+    |   |   |--->migrations
+    |   |   |--->templates
+    |   |       |--->users
+    |   |--->db.sqlite3
+    |   |--->manage.py
+    |--->.gitignore
+    |--->README.md
 
 ## 🛠️ Installation
 

@@ -24,5 +24,6 @@ urlpatterns = [
     path('', views.home),
     path('about/', views.about),
     path('users/', include('users.urls')),
+    path('task/', include('todo_task.urls'))
     
 ]

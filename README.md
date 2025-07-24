@@ -13,6 +13,9 @@ A simple to-do web application built using Django framework.
     |   |--->templates
     |   |--->to_do_app
     |   |--->todo_task
+    |   |   |--->migrations
+    |   |   |--->templates
+    |   |       |--->todo_task
     |   |--->users
     |   |   |--->migrations
     |   |   |--->templates

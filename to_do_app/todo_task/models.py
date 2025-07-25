@@ -7,3 +7,4 @@ class Task(models.Model):
     created_by = models.CharField(max_length = 100)
     event_time = models.TimeField(auto_now_add = True)
     event_date = models.DateField(auto_now_add = True)
+    slug_link = models.SlugField(null = True)

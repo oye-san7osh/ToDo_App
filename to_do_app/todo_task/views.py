@@ -11,6 +11,6 @@ def task_list(request):
     
     
 def task_detail(request):
-    taskdetail = Task.objects.get(id = id)
+    taskdetail = Task.objects.get(slug = slug_link)
     return render(request, "todo_task/task_details.html",
                   {"taskdetail": taskdetail})

@@ -5,4 +5,12 @@ from . models import Task
 # Create your views here.
 
 def task_list(request):
-    return render(request, "todo_task/task_list.html")
+    tasklists = Task.objects.all()
+    return render(request, "todo_task/task_list.html",
+                  {"tasklists": tasklists})
+    
+    
+def task_detail(request):
+    taskdetail = Task.objects.get(id = id)
+    return render(request, "todo_task/task_details.html",
+                  {"taskdetail": taskdetail})

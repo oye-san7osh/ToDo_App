@@ -5,6 +5,6 @@ app_name = 'todo_task'
 
 urlpatterns = [
     path('lists/', views.task_list, name = 'task-list'),
-    path('details/<int:id>', views.task_detail, name = 'task-detail' )
+    path('details/<slug:slug_link>', views.task_detail, name = 'task-detail' )
     
 ]

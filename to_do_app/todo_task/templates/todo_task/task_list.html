@@ -5,5 +5,11 @@
 {% endblock%}
 
 {% block content %}
-    <h1>This page is for Task Lists.</h1>
+    <h1>List of the Task created by {{tasklists.created_by}}</h1>
+    <p>
+        {% for task in tasklists %}
+            <p>Title Name: <a href="{% url 'todo_task:task-detail' task.id %}">{{task.event_name}}</a></p>
+            <p>Created on: <time datetime="{{task.event_date}}">{{task.event.date}}</time></p>
+        {% endfor %}
+    </p>
 {% endblock %}

@@ -10,7 +10,7 @@ def task_list(request):
                   {"tasklists": tasklists})
     
     
-def task_detail(request):
+def task_detail(request, slug_link):
     taskdetail = Task.objects.get(slug = slug_link)
     return render(request, "todo_task/task_details.html",
                   {"taskdetail": taskdetail})

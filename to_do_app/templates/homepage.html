@@ -6,4 +6,7 @@
 
 {% block content %}
     <h1>Welcome to the Home page for To-Do web app.</h1>
+    <p>Create a New Account: - <a href="{% url 'users:user-register' %}">Sign Up</a></p>
+
+    <p>Already Have an Account: - <a href="{% url 'users:user-login' %}">Log In</a></p>
 {% endblock %}

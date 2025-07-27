@@ -5,5 +5,27 @@
 {% endblock%}
 
 {% block content %}
-    <h1>This page is for Log in form.</h1>
+    <h1>Log In here.</h1>
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+
+    <form action="{% url 'users:user-login' %}" method = "POST">
+        {% csrf_token %}
+
+        <div class = "user-name">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div>
+
+        <div class = "password">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+        </div>
+
+        <button type = "submit">Log In</button>
+    </form>
+
 {% endblock %}

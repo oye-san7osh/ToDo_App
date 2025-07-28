@@ -5,6 +5,15 @@
 {% endblock%}
 
 {% block content %}
-    <h1>Detail of the Task</h1>
-    
+    <section>
+        <h1>Detail of the Task</h1>
+        <main>
+            <p>Name of Event: <strong>{{taskdetail.event_name}}</strong></p>
+            <p>Event Detail: <strong>{{taskdetail.event_detail}}</strong></p>
+            <p>
+                created by: <strong>{{taskdetail.created_by}}
+                at {{taskdetail.event_time}} on {{taskdetail.event_date}}.</strong>
+            </p>
+        </main>
+    </section>
 {% endblock %}

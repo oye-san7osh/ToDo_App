@@ -13,7 +13,6 @@ def user_register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "Account created successfully!")
             return redirect("todo_task:task-list")
     else:
         form = CustomUserRegisterForm()
@@ -30,7 +29,6 @@ def user_login(request):
             user = authenticate(request, username = username, password = password)
             if user is not None:
                 login(request, user)
-                messages.success(request, f"Welcome, {username}!")
                 return redirect("todo_task:task-list")
         else:
             messages.error(request, "Invalid username or password.")
@@ -42,5 +40,4 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    messages.info(request, "Logged out successfully.")
     return redirect("users:user-login")

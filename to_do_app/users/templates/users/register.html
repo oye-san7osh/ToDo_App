@@ -6,11 +6,6 @@
 
 {% block content %}
     <h1>Create a new account.</h1>
-    {% if messages %}
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-    {% endif %}
 
     <form action="{% url 'users:user-register' %}" method = "POST">
         {% csrf_token %}

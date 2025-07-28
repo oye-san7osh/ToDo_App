@@ -5,11 +5,13 @@
 {% endblock%}
 
 {% block content %}
-    <h1>List of the Task created by {{tasklists.created_by}}</h1>
+    <h1>Lists of the Task: </h1>
     <p>
         {% for task in tasklists %}
             <p>Title Name: <a href="{% url 'todo_task:task-detail' task.slug_link %}">{{task.event_name}}</a></p>
-            <p>Created on: <time datetime="{{task.event_date}}">{{task.event.date}}</time></p>
+            <p>Created on: {{task.event_date}}</p>
+        {% empty %}
+        <p>No task found. </p>
         {% endfor %}
     </p>
 {% endblock %}

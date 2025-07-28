@@ -6,11 +6,6 @@
 
 {% block content %}
     <h1>Log In here.</h1>
-    {% if messages %}
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-    {% endif %}
 
     <form action="{% url 'users:user-login' %}" method = "POST">
         {% csrf_token %}

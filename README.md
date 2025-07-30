@@ -1,11 +1,11 @@
 # Django To-Do📝 Web App
 
-A simple to-do web application built using Django framework.
+A simple to-do web application built using Python Django framework.
 
 ## 🚀 Features
 - User Registration, Login & Logout
-- Task Creation
-- Current logged In user can see only their task 
+- Task Create, Update & Delete
+- Current logged In user can see only their task
 
 ## 🗂️ Project Structure
     TO DO WEB APP/

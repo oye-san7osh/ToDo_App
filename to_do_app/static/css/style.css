@@ -1,0 +1,158 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+main {
+    padding: 2rem 1rem;
+    min-height: 70vh;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    color: #666;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #0d6efd;
+    color: white;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Titles and Paragraphs */
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Task Lists */
+.task {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.task a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task a:hover {
+    text-decoration: underline;
+}

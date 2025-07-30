@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Task
+{% endblock%}
+
+{% block content %}
+    <section>
+        <h1>Update Task: </h1>
+        <form action="" method = "POST">
+            {% csrf_token %}
+            <div class = "event-name">
+                {{ form.event_name.label_tag }}
+                {{ form.event_name }}
+            </div>
+            <div class = "event-detail">
+                {{ form.event_detail.label_tag }}
+                {{ form.event_detail }}
+            </div>
+
+            <button type = "submit">Post Task</button>
+        </form>
+    </section>
+{% endblock %}

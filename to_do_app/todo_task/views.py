@@ -32,3 +32,28 @@ def new_task(request):
     else:
         form = forms.CreateTask()
     return render(request, "todo_task/task_new.html", {"form": form} )
+
+
+def update_task(request, slug_link):
+    task = Task.objects.get(slug_link = slug_link)
+    
+    if request.method == "POST":
+        form = forms.CreateTask(request.POST, instance = task)
+        
+        if form.is_valid():
+            form.save()
+        return redirect("todo_task:task-list")
+    else:
+        form = forms.CreateTask(instance = task)
+    return render(request, "todo_task/update_task.html", {"form": form})
+
+
+def delete_task(request, slug_link):
+    task = Task.objects.get(slug_link = slug_link)
+    
+    if request.method == "POST":
+        task.delete()
+        return redirect('todo_task:task-list')
+    
+    return render(request, 'todo_task/delete_task.html', {"task": task} )
+    

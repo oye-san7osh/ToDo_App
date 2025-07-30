@@ -4,7 +4,8 @@ A simple to-do web application built using Django framework.
 
 ## 🚀 Features
 - User Registration, Login & Logout
-- Task Creation and Editing
+- Task Creation
+- Current logged In user can see only their task 
 
 ## 🗂️ Project Structure
     TO DO WEB APP/
@@ -29,8 +30,6 @@ A simple to-do web application built using Django framework.
 
 1. Clone the Repository:
     ```git clone https://github.com/username/django-todo.git```
-
-    ```cd ```
 
 
 2. Create a Virtual Environment and activate it:

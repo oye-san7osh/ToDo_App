@@ -8,7 +8,6 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    scroll-behavior: smooth;
     background-color: #f9f9f9;
     color: #333;
 }
@@ -74,7 +73,7 @@ footer {
 /* Forms */
 form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 1.5rem auto;
     background-color: white;
     padding: 1.5rem;
     border-radius: 8px;
@@ -110,20 +109,49 @@ textarea:focus {
 }
 
 button {
-    display: block;
-    width: 100%;
-    background-color: #0d6efd;
-    color: white;
-    padding: 0.6rem;
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 1rem;
 }
 
-button:hover {
+button[type="submit"] {
+    background-color: #0d6efd;
+    color: white;
+}
+
+button[type="submit"]:hover {
     background-color: #0b5ed7;
+}
+
+/* For Delete Form Buttons */
+button[type="delete"] {
+    background-color: #dc3545;
+    color: white;
+    margin-right: 0.6rem;
+}
+
+button[type="delete"]:hover {
+    background-color: #bb2d3b;
+}
+
+button[type="cancel"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+button[type="cancel"]:hover {
+    background-color: #5c636a;
+}
+
+button[type="cancel"] a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
 /* Titles and Paragraphs */
@@ -138,7 +166,7 @@ p {
     line-height: 1.6;
 }
 
-/* Task Lists */
+/* Task List Display */
 .task {
     background-color: white;
     padding: 1rem;
